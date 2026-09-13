@@ -14,220 +14,249 @@
         }
 
         body {
-            background: #0B0B0D;
-            color: #FFFFFF;
+            background: #09090b;
+            color: white;
             font-family: Arial, Helvetica, sans-serif;
-            min-height: 100vh;
         }
+
+        /* HEADER */
 
         header {
-            padding: 32px 50px 24px;
-            border-bottom: 1px solid #252529;
+            height: 135px;
+            padding: 25px 45px 0;
+            position: relative;
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    rgba(170, 0, 0, 0.55) 0%,
+                    rgba(80, 0, 0, 0.25) 35%,
+                    rgba(9, 9, 11, 1) 75%
+                );
+            border-bottom: 1px solid #2a2a2d;
         }
 
-        .header-top {
+        .header-content {
+            height: 100%;
             display: flex;
+            align-items: flex-start;
             justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 12px;
+            min-width: 370px;
         }
 
-        .logo-title {
-            font-size: 32px;
+        .wwe {
+            font-size: 48px;
             font-weight: 900;
-            letter-spacing: 2px;
+            font-style: italic;
+            line-height: 1;
         }
 
-        .subtitle {
-            color: #A7A7AD;
+        .two-k {
+            color: #e60012;
+            font-size: 48px;
+            font-weight: 900;
+            font-style: italic;
+            line-height: 1;
+        }
+
+        .universe {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .tracker {
+            position: absolute;
+            left: 188px;
+            top: 73px;
             font-size: 13px;
-            margin-top: 6px;
+            letter-spacing: 8px;
+            color: #ddd;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            height: 65px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
             letter-spacing: 1px;
         }
 
-        .status {
-            color: #A7A7AD;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        nav a:hover {
+            color: #e60012;
         }
 
-        main {
-            max-width: 1400px;
-            margin: auto;
-            padding: 40px 50px 60px;
+        .season {
+            height: 65px;
+            border-left: 3px solid white;
+            padding-left: 25px;
+            margin-left: 5px;
+            text-align: center;
         }
 
-        .section-title {
-            font-size: 14px;
-            color: #A7A7AD;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
+        .season-title {
+            color: #e60012;
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .season-year {
+            font-size: 25px;
             font-weight: 700;
         }
 
-        /* BRANDS */
+        /* MAIN */
 
-        .brands {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-bottom: 40px;
+        main {
+            max-width: 1380px;
+            margin: auto;
+            padding: 40px 45px 80px;
         }
 
-        .brand {
-            min-height: 150px;
-            border: 1px solid #29292E;
-            background: #151518;
+        .page-title {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 22px;
-            cursor: pointer;
-            transition: 0.2s ease;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
-        .brand:hover {
-            transform: translateY(-3px);
-            border-color: #555;
+        .title-bar {
+            width: 12px;
+            height: 45px;
+            background: #e60012;
         }
 
-        .brand-name {
-            font-size: 30px;
+        .page-title h1 {
+            font-size: 38px;
             font-weight: 900;
-            letter-spacing: 1px;
         }
 
-        .brand-info {
-            margin-top: 7px;
-            color: #A7A7AD;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        /* ROSTER CARDS */
 
-        .raw {
-            border-top: 4px solid #D71920;
-        }
-
-        .smackdown {
-            border-top: 4px solid #1473E6;
-        }
-
-        .nxt {
-            border-top: 4px solid #A6A6A6;
-        }
-
-        .aaa {
-            border-top: 4px solid #19A463;
-        }
-
-        /* THREE MAIN CARDS */
-
-        .dashboard {
+        .roster-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
         }
 
-        .dashboard-card {
-            background: #151518;
-            border: 1px solid #29292E;
-            min-height: 300px;
-            padding: 25px;
-            cursor: pointer;
-            transition: 0.2s ease;
+        .roster-card {
+            height: 260px;
             position: relative;
             overflow: hidden;
+            border-radius: 16px;
+            cursor: pointer;
+            border: 1px solid #222;
         }
 
-        .dashboard-card:hover {
-            transform: translateY(-3px);
-            border-color: #555;
+        .roster-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.35s ease;
         }
 
-        .card-label {
-            color: #A7A7AD;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
+        .roster-card:hover img {
+            transform: scale(1.04);
         }
 
-        .card-title {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .card-description {
-            color: #A7A7AD;
-            font-size: 14px;
-            line-height: 1.6;
-            max-width: 300px;
-        }
-
-        .card-arrow {
+        .roster-card::after {
+            content: "";
             position: absolute;
-            bottom: 22px;
-            right: 25px;
-            font-size: 24px;
-            color: #777;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,0.35),
+                transparent 55%
+            );
+            pointer-events: none;
         }
 
-        .draft {
-            border-top: 4px solid #7B3FF2;
-        }
-
-        .tournaments {
-            border-top: 4px solid #7B3FF2;
-        }
-
-        .news {
-            border-top: 4px solid #7B3FF2;
-        }
+        /* FOOTER */
 
         footer {
-            border-top: 1px solid #252529;
-            padding: 22px 50px;
-            color: #66666D;
+            height: 70px;
+            border-top: 1px solid #242426;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
             font-size: 11px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
-        @media (max-width: 850px) {
+        /* MOBILE */
+
+        @media (max-width: 1100px) {
+
             header {
+                height: auto;
                 padding: 25px;
             }
 
-            main {
-                padding: 30px 25px 50px;
+            .header-content {
+                flex-direction: column;
+                gap: 25px;
             }
 
-            .brands {
-                grid-template-columns: repeat(2, 1fr);
+            .brand-logo {
+                min-width: auto;
             }
 
-            .dashboard {
-                grid-template-columns: 1fr;
+            .tracker {
+                position: static;
+                margin-left: 130px;
+                margin-top: -25px;
             }
 
-            .status {
+            nav {
+                flex-wrap: wrap;
+                height: auto;
+                padding-bottom: 20px;
+            }
+
+            .season {
                 display: none;
             }
         }
 
-        @media (max-width: 500px) {
-            .brands {
+        @media (max-width: 700px) {
+
+            .roster-grid {
                 grid-template-columns: 1fr;
             }
 
-            .logo-title {
-                font-size: 25px;
+            main {
+                padding: 30px 20px 60px;
+            }
+
+            .wwe,
+            .two-k {
+                font-size: 35px;
+            }
+
+            .universe {
+                font-size: 28px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .roster-card {
+                height: 200px;
             }
         }
     </style>
@@ -235,86 +264,69 @@
 
 <body>
 
-    <header>
-        <div class="header-top">
-            <div>
-                <div class="logo-title">WWE 2K UNIVERSE</div>
-                <div class="subtitle">UNIVERSE TRACKER</div>
-            </div>
+<header>
 
-            <div class="status">
-                Universe Mode
-            </div>
+    <div class="header-content">
+
+        <div class="brand-logo">
+            <div class="wwe">WWE</div>
+            <div class="two-k">2K</div>
+            <div class="universe">UNIVERSE</div>
+            <div class="tracker">TRACKER</div>
         </div>
-    </header>
 
-    <main>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="#">ROSTERS</a>
+            <a href="#">CHAMPIONSHIPS</a>
+            <a href="#">EVENTS</a>
+            <a href="#">CALENDAR</a>
+            <a href="#">STATS</a>
 
-        <div class="section-title">Brands</div>
-
-        <section class="brands">
-
-            <div class="brand raw">
-                <div class="brand-name">RAW</div>
-                <div class="brand-info">Monday Night RAW</div>
+            <div class="season">
+                <div class="season-title">SEASON 1</div>
+                <div class="season-year">2026</div>
             </div>
+        </nav>
 
-            <div class="brand smackdown">
-                <div class="brand-name">SMACKDOWN</div>
-                <div class="brand-info">Friday Night SmackDown</div>
-            </div>
+    </div>
 
-            <div class="brand nxt">
-                <div class="brand-name">NXT</div>
-                <div class="brand-info">NXT</div>
-            </div>
-
-            <div class="brand aaa">
-                <div class="brand-name">AAA</div>
-                <div class="brand-info">Lucha Libre</div>
-            </div>
-
-        </section>
+</header>
 
 
-        <div class="section-title">Universe</div>
+<main>
 
-        <section class="dashboard">
+    <div class="page-title">
+        <div class="title-bar"></div>
+        <h1>ROSTERS</h1>
+    </div>
 
-            <div class="dashboard-card draft">
-                <div class="card-label">Universe Management</div>
-                <div class="card-title">DRAFT</div>
-                <div class="card-description">
-                    Manage draft pools, selections and brand assignments.
-                </div>
-                <div class="card-arrow">→</div>
-            </div>
+    <div class="roster-grid">
 
-            <div class="dashboard-card tournaments">
-                <div class="card-label">Competition</div>
-                <div class="card-title">TOURNAMENTS</div>
-                <div class="card-description">
-                    Track tournaments, brackets and tournament history.
-                </div>
-                <div class="card-arrow">→</div>
-            </div>
+        <div class="roster-card">
+            <img src="assets/raw.jpg" alt="RAW">
+        </div>
 
-            <div class="dashboard-card news">
-                <div class="card-label">Universe Updates</div>
-                <div class="card-title">LATEST NEWS</div>
-                <div class="card-description">
-                    Follow the latest developments from your Universe.
-                </div>
-                <div class="card-arrow">→</div>
-            </div>
+        <div class="roster-card">
+            <img src="assets/nxt.webp" alt="NXT">
+        </div>
 
-        </section>
+        <div class="roster-card">
+            <img src="assets/smackdown.jpg" alt="SmackDown">
+        </div>
 
-    </main>
+        <div class="roster-card">
+            <img src="assets/aaa.jpg" alt="AAA">
+        </div>
 
-    <footer>
-        WWE 2K Universe Tracker
-    </footer>
+    </div>
+
+</main>
+
+
+<footer>
+    WWE 2K UNIVERSE TRACKER • SEASON 1 • 2026
+</footer>
 
 </body>
 </html>
