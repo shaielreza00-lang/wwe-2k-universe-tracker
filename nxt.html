@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NXT | WWE 2K Universe Tracker</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #09090b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    border-bottom: 1px solid #29292d;
+    background: radial-gradient(
+        ellipse at 50% 100%,
+        rgba(150,150,150,.30),
+        transparent 65%
+    );
+    padding: 25px 45px;
+}
+
+.header {
+    max-width: 1450px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.logo-wwe {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.logo-2k {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    color: #e30613;
+    margin-left: 6px;
+}
+
+.logo-universe {
+    font-size: 28px;
+    font-weight: 900;
+    margin-left: 7px;
+}
+
+.logo-sub {
+    position: absolute;
+    margin: 47px 0 0 125px;
+    font-size: 9px;
+    letter-spacing: 6px;
+    color: #aaa;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+.season {
+    border-left: 3px solid white;
+    padding-left: 18px;
+    text-align: center;
+}
+
+.season-name {
+    display: block;
+    color: #e30613;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.season-year {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 45px;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.title-bar {
+    width: 9px;
+    height: 42px;
+    background: #999;
+}
+
+.page-title h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.brand-header {
+    background: linear-gradient(
+        90deg,
+        #181818,
+        #0d0d0f
+    );
+    border: 1px solid #29292d;
+    border-left: 5px solid #999;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.brand-header h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.brand-header p {
+    color: #999;
+    font-size: 13px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 35px 0 18px;
+}
+
+.section-title span {
+    width: 7px;
+    height: 28px;
+    background: #999;
+}
+
+.section-title h2 {
+    font-size: 23px;
+}
+
+.roster-box {
+    background: #151518;
+    border: 1px solid #29292d;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+footer {
+    border-top: 1px solid #29292d;
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+@media(max-width: 1000px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 700px) {
+    main {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header">
+
+        <div class="logo">
+            <span class="logo-wwe">WWE</span>
+            <span class="logo-2k">2K</span>
+            <span class="logo-universe">UNIVERSE</span>
+            <span class="logo-sub">TRACKER</span>
+        </div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="rosters.html">ROSTERS</a>
+            <a href="#">CHAMPIONSHIPS</a>
+            <a href="#">EVENTS</a>
+            <a href="#">CALENDAR</a>
+            <a href="#">STATS</a>
+
+            <div class="season">
+                <span class="season-name">SEASON 1</span>
+                <span class="season-year">2026</span>
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <div class="page-title">
+        <div class="title-bar"></div>
+        <h1>NXT</h1>
+    </div>
+
+    <div class="brand-header">
+        <h2>NXT</h2>
+        <p>WWE 2K Universe Tracker • Season 1 • 2026</p>
+    </div>
+
+    <div class="section-title">
+        <span></span>
+        <h2>MEN'S DIVISION</h2>
+    </div>
+
+    <div class="roster-box">
+        ROSTER DATA WILL APPEAR HERE
+    </div>
+
+    <div class="section-title">
+        <span></span>
+        <h2>WOMEN'S DIVISION</h2>
+    </div>
+
+    <div class="roster-box">
+        ROSTER DATA WILL APPEAR HERE
+    </div>
+
+    <div class="section-title">
+        <span></span>
+        <h2>TAG TEAMS</h2>
+    </div>
+
+    <div class="roster-box">
+        TAG TEAM DATA WILL APPEAR HERE
+    </div>
+
+</main>
+
+<footer>
+    WWE 2K UNIVERSE TRACKER • NXT • SEASON 1 • 2026
+</footer>
+
+</body>
+</html>
