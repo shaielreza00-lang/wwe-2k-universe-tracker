@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AAA | WWE 2K Universe Tracker</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background: #080808;
+    border-bottom: 1px solid #222;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.season {
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* AAA HERO */
+
+.brand-hero {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, rgba(25,164,99,0.35), transparent 55%),
+        linear-gradient(180deg, #07100c, #050505);
+}
+
+.brand-hero h1 {
+    font-size: 72px;
+    letter-spacing: 5px;
+}
+
+.green-line {
+    width: 120px;
+    height: 5px;
+    background: #19A463;
+    margin: 15px auto 0;
+}
+
+/* CONTENT */
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+.brand-name {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.divisions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.division {
+    background: #0d0d0d;
+    border: 1px solid #222;
+    min-height: 220px;
+    padding: 25px;
+    position: relative;
+}
+
+.division::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #19A463;
+}
+
+.division h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.division p {
+    color: #666;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .divisions {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-hero h1 {
+        font-size: 50px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        WWE 2K UNIVERSE TRACKER
+    </div>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="rosters.html">ROSTERS</a>
+        <a href="#">CHAMPIONSHIPS</a>
+        <a href="#">EVENTS</a>
+        <a href="#">CALENDAR</a>
+        <a href="#">STATS</a>
+    </nav>
+
+    <div class="season">
+        SEASON 1<br>
+        2026
+    </div>
+
+</header>
+
+<section class="brand-hero">
+
+    <div>
+        <h1>AAA</h1>
+        <div class="green-line"></div>
+    </div>
+
+</section>
+
+<main class="container">
+
+    <h2 class="brand-name">
+        AAA
+    </h2>
+
+    <div class="divisions">
+
+        <div class="division">
+            <h2>MEN'S DIVISION</h2>
+            <p>Roster masculino</p>
+        </div>
+
+        <div class="division">
+            <h2>WOMEN'S DIVISION</h2>
+            <p>Roster femenino</p>
+        </div>
+
+        <div class="division">
+            <h2>TAG TEAMS</h2>
+            <p>Equipos y parejas</p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    WWE 2K UNIVERSE TRACKER
+</footer>
+
+</body>
+</html>
