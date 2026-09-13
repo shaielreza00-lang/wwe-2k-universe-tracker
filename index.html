@@ -1,1 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>WWE 2K Universe Tracker</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0B0B0D;
+            color: #FFFFFF;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 32px 50px 24px;
+            border-bottom: 1px solid #252529;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-title {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #A7A7AD;
+            font-size: 13px;
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+
+        .status {
+            color: #A7A7AD;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: auto;
+            padding: 40px 50px 60px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            color: #A7A7AD;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        /* BRANDS */
+
+        .brands {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .brand {
+            min-height: 150px;
+            border: 1px solid #29292E;
+            background: #151518;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .brand:hover {
+            transform: translateY(-3px);
+            border-color: #555;
+        }
+
+        .brand-name {
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .brand-info {
+            margin-top: 7px;
+            color: #A7A7AD;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .raw {
+            border-top: 4px solid #D71920;
+        }
+
+        .smackdown {
+            border-top: 4px solid #1473E6;
+        }
+
+        .nxt {
+            border-top: 4px solid #A6A6A6;
+        }
+
+        .aaa {
+            border-top: 4px solid #19A463;
+        }
+
+        /* THREE MAIN CARDS */
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .dashboard-card {
+            background: #151518;
+            border: 1px solid #29292E;
+            min-height: 300px;
+            padding: 25px;
+            cursor: pointer;
+            transition: 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            border-color: #555;
+        }
+
+        .card-label {
+            color: #A7A7AD;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .card-description {
+            color: #A7A7AD;
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .card-arrow {
+            position: absolute;
+            bottom: 22px;
+            right: 25px;
+            font-size: 24px;
+            color: #777;
+        }
+
+        .draft {
+            border-top: 4px solid #7B3FF2;
+        }
+
+        .tournaments {
+            border-top: 4px solid #7B3FF2;
+        }
+
+        .news {
+            border-top: 4px solid #7B3FF2;
+        }
+
+        footer {
+            border-top: 1px solid #252529;
+            padding: 22px 50px;
+            color: #66666D;
+            font-size: 11px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 850px) {
+            header {
+                padding: 25px;
+            }
+
+            main {
+                padding: 30px 25px 50px;
+            }
+
+            .brands {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .status {
+                display: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .brands {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-title {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div>
+                <div class="logo-title">WWE 2K UNIVERSE</div>
+                <div class="subtitle">UNIVERSE TRACKER</div>
+            </div>
+
+            <div class="status">
+                Universe Mode
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="section-title">Brands</div>
+
+        <section class="brands">
+
+            <div class="brand raw">
+                <div class="brand-name">RAW</div>
+                <div class="brand-info">Monday Night RAW</div>
+            </div>
+
+            <div class="brand smackdown">
+                <div class="brand-name">SMACKDOWN</div>
+                <div class="brand-info">Friday Night SmackDown</div>
+            </div>
+
+            <div class="brand nxt">
+                <div class="brand-name">NXT</div>
+                <div class="brand-info">NXT</div>
+            </div>
+
+            <div class="brand aaa">
+                <div class="brand-name">AAA</div>
+                <div class="brand-info">Lucha Libre</div>
+            </div>
+
+        </section>
+
+
+        <div class="section-title">Universe</div>
+
+        <section class="dashboard">
+
+            <div class="dashboard-card draft">
+                <div class="card-label">Universe Management</div>
+                <div class="card-title">DRAFT</div>
+                <div class="card-description">
+                    Manage draft pools, selections and brand assignments.
+                </div>
+                <div class="card-arrow">→</div>
+            </div>
+
+            <div class="dashboard-card tournaments">
+                <div class="card-label">Competition</div>
+                <div class="card-title">TOURNAMENTS</div>
+                <div class="card-description">
+                    Track tournaments, brackets and tournament history.
+                </div>
+                <div class="card-arrow">→</div>
+            </div>
+
+            <div class="dashboard-card news">
+                <div class="card-label">Universe Updates</div>
+                <div class="card-title">LATEST NEWS</div>
+                <div class="card-description">
+                    Follow the latest developments from your Universe.
+                </div>
+                <div class="card-arrow">→</div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        WWE 2K Universe Tracker
+    </footer>
+
+</body>
+</html>
