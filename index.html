@@ -27,6 +27,7 @@ body {
 header {
     height: 145px;
     padding: 0 45px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,24 +42,44 @@ header {
         #080808;
 
     border-bottom: 1px solid #222;
-    box-shadow: 0 8px 35px rgba(215,25,32,0.25);
+
+    box-shadow:
+        0 8px 35px rgba(215,25,32,0.25);
 }
 
 /* LOGO */
 
 .logo {
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 0.9;
     width: 360px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.logo span {
-    display: block;
-    font-size: 12px;
-    letter-spacing: 9px;
-    margin-left: 105px;
-    margin-top: 8px;
+.logo img {
+    width: 165px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.85;
+}
+
+.logo-text .universe {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo-text .tracker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    margin-top: 7px;
+    margin-left: 2px;
 }
 
 /* NAV */
@@ -72,6 +93,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
+
     font-size: 17px;
     font-weight: 800;
     letter-spacing: 1px;
@@ -86,20 +108,26 @@ nav a:hover {
 .season {
     border-left: 3px solid white;
     padding-left: 28px;
+
     text-align: center;
+
     min-width: 120px;
 }
 
 .season span {
     display: block;
+
     color: #D71920;
+
     font-size: 18px;
     font-weight: 900;
 }
 
 .season strong {
     display: block;
+
     font-size: 17px;
+
     margin-top: 4px;
 }
 
@@ -109,23 +137,31 @@ nav a:hover {
 
 .container {
     max-width: 1365px;
+
     margin: 35px auto 70px;
+
     padding: 0 25px;
 }
 
-/* SECTION TITLES */
+/* =========================
+   SECTION TITLES
+========================= */
 
 .section-title {
     display: flex;
     align-items: center;
+
     gap: 10px;
+
     margin-bottom: 25px;
 }
 
 .section-title::before {
     content: "";
+
     width: 12px;
     height: 45px;
+
     background: #D71920;
 }
 
@@ -140,28 +176,46 @@ nav a:hover {
 
 .brands {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 14px;
+
     margin-bottom: 25px;
 }
 
 .brand-card {
     height: 235px;
+
     border-radius: 16px;
+
     overflow: hidden;
-    display: block;
-    transition: transform 0.2s, filter 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #050505;
+
+    border: 1px solid #171717;
+
+    transition:
+        transform 0.2s,
+        filter 0.2s;
 }
 
 .brand-card:hover {
     transform: translateY(-5px);
+
     filter: brightness(1.15);
 }
 
 .brand-card img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+
+    object-fit: contain;
+
     display: block;
 }
 
@@ -171,28 +225,37 @@ nav a:hover {
 
 .modules {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 45px;
+
     margin-bottom: 30px;
 }
 
 .module {
     display: block;
+
     text-decoration: none;
+
     color: white;
 }
 
 .module-title {
     display: flex;
     align-items: center;
+
     gap: 10px;
+
     margin-bottom: 22px;
 }
 
 .module-title::before {
     content: "";
+
     width: 12px;
     height: 45px;
+
     background: #D71920;
 }
 
@@ -201,102 +264,41 @@ nav a:hover {
     font-weight: 900;
 }
 
-/* CARD */
+/* =========================
+   MODULE IMAGE
+========================= */
 
 .module-card {
     height: 210px;
+
     border-radius: 16px;
+
     overflow: hidden;
+
     position: relative;
+
+    background: #050505;
 
     border: 1px solid #202020;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(215,25,32,0.35),
-            transparent 65%
-        ),
-        linear-gradient(135deg, #151515, #050505);
-
-    transition: transform 0.2s, filter 0.2s;
+    transition:
+        transform 0.2s,
+        filter 0.2s;
 }
 
 .module:hover .module-card {
     transform: translateY(-5px);
-    filter: brightness(1.15);
+
+    filter: brightness(1.12);
 }
 
-/* MODULE ICON */
+.module-card img {
+    width: 100%;
+    height: 100%;
 
-.module-icon {
-    position: absolute;
-    inset: 0;
+    object-fit: cover;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 75px;
-    font-weight: 900;
-
-    text-shadow:
-        0 0 25px rgba(255,255,255,0.2);
-}
-
-/* DIFFERENT MODULE LOOKS */
-
-.draft .module-card {
-    background:
-        radial-gradient(circle at center,
-        rgba(255,255,255,0.7),
-        transparent 35%),
-        linear-gradient(
-            90deg,
-            #0879d1,
-            #eeeeee,
-            #d71920
-        );
-}
-
-.tournaments .module-card {
-    background:
-        radial-gradient(circle at center,
-        rgba(255,190,70,0.45),
-        transparent 45%),
-        linear-gradient(135deg,#252525,#080808);
-}
-
-.news .module-card {
-    background:
-        radial-gradient(circle at center,
-        rgba(215,25,32,0.45),
-        transparent 45%),
-        linear-gradient(135deg,#1b1b1b,#050505);
-}
-
-.calendar .module-card {
-    background:
-        radial-gradient(circle at center,
-        rgba(20,115,230,0.4),
-        transparent 45%),
-        linear-gradient(135deg,#161616,#050505);
-}
-
-.next-event .module-card {
-    background:
-        radial-gradient(circle at center,
-        rgba(25,164,99,0.35),
-        transparent 45%),
-        linear-gradient(135deg,#161616,#050505);
-}
-
-.next-ple .module-card {
-    background:
-        radial-gradient(circle at center,
-        rgba(123,63,242,0.5),
-        transparent 45%),
-        linear-gradient(135deg,#171717,#050505);
+    display: block;
 }
 
 /* =========================
@@ -305,8 +307,11 @@ nav a:hover {
 
 footer {
     text-align: center;
+
     padding: 40px;
+
     color: #555;
+
     font-size: 12px;
 }
 
@@ -314,12 +319,15 @@ footer {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
     header {
         height: auto;
+
         padding: 25px;
+
         gap: 25px;
+
         flex-wrap: wrap;
     }
 
@@ -329,8 +337,11 @@ footer {
 
     nav {
         order: 3;
+
         width: 100%;
+
         justify-content: center;
+
         flex-wrap: wrap;
     }
 
@@ -353,6 +364,10 @@ footer {
     .module-title h2 {
         font-size: 27px;
     }
+
+    .brand-card {
+        height: 220px;
+    }
 }
 
 </style>
@@ -360,156 +375,334 @@ footer {
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="logo">
-        WWE 2K UNIVERSE
-        <span>TRACKER</span>
+
+        <img src="assets/wwe2k-logo.png" alt="WWE 2K">
+
+        <div class="logo-text">
+
+            <div class="universe">
+                UNIVERSE
+            </div>
+
+            <div class="tracker">
+                TRACKER
+            </div>
+
+        </div>
+
     </div>
 
+
     <nav>
+
         <a href="index.html">HOME</a>
+
         <a href="rosters.html">ROSTERS</a>
+
         <a href="#">CHAMPIONSHIPS</a>
+
         <a href="#">EVENTS</a>
+
         <a href="#">CALENDAR</a>
+
         <a href="#">STATS</a>
+
     </nav>
 
+
     <div class="season">
+
         <span>SEASON 1</span>
+
         <strong>2026</strong>
+
     </div>
 
 </header>
 
 
+<!-- =========================
+     MAIN
+========================= -->
+
 <main class="container">
 
-    <!-- BRANDS -->
+
+    <!-- =====================
+         BRANDS
+    ====================== -->
 
     <div class="section-title">
+
         <h2>BRANDS</h2>
+
     </div>
+
 
     <div class="brands">
 
+
         <a href="raw.html" class="brand-card">
-            <img src="assets/raw.jpg" alt="RAW">
+
+            <img
+                src="assets/raw.jpg"
+                alt="RAW"
+            >
+
         </a>
+
 
         <a href="nxt.html" class="brand-card">
-            <img src="assets/nxt.webp" alt="NXT">
+
+            <img
+                src="assets/nxt.webp"
+                alt="NXT"
+            >
+
         </a>
+
 
         <a href="smackdown.html" class="brand-card">
-            <img src="assets/smackdown.jpg" alt="SmackDown">
+
+            <img
+                src="assets/smackdown.jpg"
+                alt="SmackDown"
+            >
+
         </a>
+
 
         <a href="aaa.html" class="brand-card">
-            <img src="assets/aaa.jpg" alt="AAA">
+
+            <img
+                src="assets/aaa.jpg"
+                alt="AAA"
+            >
+
         </a>
+
 
     </div>
 
 
-    <!-- ROW 1 -->
+    <!-- =====================
+         ROW 1
+    ====================== -->
 
     <div class="modules">
 
-        <a href="#" class="module draft">
+
+        <!-- DRAFT -->
+
+        <a href="#" class="module">
 
             <div class="module-title">
+
                 <h2>DRAFT</h2>
+
             </div>
 
+
             <div class="module-card">
-                <div class="module-icon">D</div>
+
+                <img
+                    src="assets/draft.png"
+                    alt="Draft"
+                >
+
             </div>
 
         </a>
 
 
-        <a href="#" class="module tournaments">
+        <!-- TOURNAMENTS -->
+
+        <a href="#" class="module">
 
             <div class="module-title">
+
                 <h2>TOURNAMENTS</h2>
+
             </div>
 
+
             <div class="module-card">
-                <div class="module-icon">🏆</div>
+
+                <img
+                    src="assets/tournaments.png"
+                    alt="Tournaments"
+                >
+
             </div>
 
         </a>
 
 
-        <a href="#" class="module news">
+        <!-- LATEST NEWS -->
+
+        <a href="#" class="module">
 
             <div class="module-title">
+
                 <h2>LATEST NEWS</h2>
+
             </div>
 
+
             <div class="module-card">
-                <div class="module-icon">▤</div>
+
+                <img
+                    src="assets/latest-news.png"
+                    alt="Latest News"
+                >
+
             </div>
 
         </a>
+
 
     </div>
 
 
-    <!-- ROW 2 -->
+    <!-- =====================
+         ROW 2
+    ====================== -->
 
     <div class="modules">
 
-        <a href="#" class="module calendar">
+
+        <!-- CALENDAR -->
+
+        <a href="#" class="module">
 
             <div class="module-title">
+
                 <h2>CALENDAR</h2>
+
             </div>
 
+
             <div class="module-card">
-                <div class="module-icon">▦</div>
+
+                <img
+                    src="assets/calendar.png"
+                    alt="Calendar"
+                >
+
             </div>
 
         </a>
 
 
-        <a href="#" class="module next-event">
+        <!-- NEXT EVENT -->
+
+        <a href="#" class="module">
 
             <div class="module-title">
+
                 <h2>NEXT EVENT</h2>
+
             </div>
 
+
             <div class="module-card">
-                <div class="module-icon">★</div>
+
+                <div style="
+                    width:100%;
+                    height:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    background:
+                    radial-gradient(
+                        circle at center,
+                        rgba(25,164,99,0.35),
+                        transparent 50%
+                    ),
+                    #080808;
+                ">
+
+                    <span style="
+                        font-size:70px;
+                        font-weight:900;
+                        color:#19A463;
+                    ">
+                        ★
+                    </span>
+
+                </div>
+
             </div>
 
         </a>
 
 
-        <a href="#" class="module next-ple">
+        <!-- NEXT PLE -->
+
+        <a href="#" class="module">
 
             <div class="module-title">
+
                 <h2>NEXT PLE</h2>
+
             </div>
 
+
             <div class="module-card">
-                <div class="module-icon">◆</div>
+
+                <div style="
+                    width:100%;
+                    height:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    background:
+                    radial-gradient(
+                        circle at center,
+                        rgba(123,63,242,0.5),
+                        transparent 50%
+                    ),
+                    #080808;
+                ">
+
+                    <span style="
+                        font-size:70px;
+                        font-weight:900;
+                        color:#7B3FF2;
+                    ">
+                        ◆
+                    </span>
+
+                </div>
+
             </div>
 
         </a>
+
 
     </div>
+
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     WWE 2K UNIVERSE TRACKER
+
 </footer>
+
 
 </body>
 </html>
